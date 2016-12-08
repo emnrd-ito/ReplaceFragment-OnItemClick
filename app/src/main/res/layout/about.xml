@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_app_name"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_xxl"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+        <TextView
+            android:text="Version: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/version_label"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Version number here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/version_number"
+            android:textSize="@dimen/text_size_xl"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="Last Download Dates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_download_dates"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_xxl"/>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/individual_gridlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:alignmentMode="alignBounds"
+        android:columnCount="2"
+        android:columnOrderPreserved="false">
+
+        <TextView
+            android:text="Employees: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:id="@+id/employees_download_label"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Employees date here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:id="@+id/employees_download_date"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Locations: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:id="@+id/locations_download_label"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Locations date here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:id="@+id/locations_download_date"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Divisions: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:id="@+id/divisions_download_label"
+            android:textSize="@dimen/text_size_xl"/>
+
+        <TextView
+            android:text="Divisions Date here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:id="@+id/divisions_download_date"
+            android:textSize="@dimen/text_size_xl"/>
+
+    </GridLayout>
+
+</LinearLayout>
