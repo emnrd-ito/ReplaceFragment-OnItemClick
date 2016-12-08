@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ReplaceFragments-OnItemClick.iml" filepath="$PROJECT_DIR$/ReplaceFragments-OnItemClick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReplaceFragment-OnItemClick-GitHub.iml" filepath="$PROJECT_DIR$/ReplaceFragment-OnItemClick-GitHub.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
