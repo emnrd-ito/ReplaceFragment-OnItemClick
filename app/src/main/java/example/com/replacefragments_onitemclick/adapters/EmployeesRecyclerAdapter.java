@@ -116,8 +116,8 @@ public class EmployeesRecyclerAdapter extends RecyclerView.Adapter<EmployeesRecy
             fragmentChangeEvent.setPosition(FragmentChange.FRAGMENT_INDIVIDUAL);
             fragmentChangeEvent.setEmployeeDataParcelable(employeeDataParcelable);
 
-            FragmentChange fragmentChange = FragmentChange.getInstance(fragmentManager);
-            fragmentChange.onFragmentChange(fragmentChangeEvent);
+            FragmentChange fragmentChange = FragmentChange.getInstance();
+            fragmentChange.onFragmentChange(fragmentChangeEvent, fragmentManager);
 
             mOnItemClickListener.onItemClick(null, itemHolder.itemView,
                     itemHolder.getAdapterPosition(), itemHolder.getItemId());
