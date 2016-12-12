@@ -2,12 +2,9 @@
 package example.com.replacefragments_onitemclick.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 
-import java.util.EmptyStackException;
 import java.util.Stack;
 
 import example.com.replacefragments_onitemclick.model.EmployeeListRestrictionsParcelable;
@@ -33,29 +30,27 @@ public class FragmentChange implements FragmentChangeListener {
 
     private static FragmentChange instance;
     private int mPosition = 0;
-    private FragmentManager mFragmentManager;
 
     // constructor
-    public FragmentChange(FragmentManager fragmentManager) {
-        mFragmentManager = fragmentManager;
+    public FragmentChange() {
     }
 
 
-    public static FragmentChange getInstance(FragmentManager fragmentManager) {
+    public static FragmentChange getInstance() {
         if (instance == null) {
-            instance = new FragmentChange(fragmentManager);
+            instance = new FragmentChange();
         }
         return instance;
     }
 
     @Override
-    public void onFragmentChange(FragmentChangeEvent fragmentChangeEvent) {
+    public void onFragmentChange(FragmentChangeEvent fragmentChangeEvent, final FragmentManager fragmentManager) {
 
         Bundle bundle = new Bundle();
 
         mPosition = fragmentChangeEvent.getPosition();
 
-        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         switch (mPosition) {
             case FRAGMENT_EMPLOYEE_LIST: // App start or from onNavigationDrawerItemSelected
 
